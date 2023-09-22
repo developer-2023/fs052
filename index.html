@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pipe selector</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+        }
+        /* |= attributes equal to value or value followed by - and text */
+        [class |= "PL"] {
+            background-color: seagreen;
+        }
+        /* i case insensitive*/
+        [class = "PL" i] {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <p class="PL">Lorem, ipsum dolor.</p>
+    <p class="PL-pl">Lorem, ipsum dolor.</p>
+    <p class="PL foo">Lorem, ipsum dolor.</p>
+    <p class="PL-test">Lorem, ipsum dolor.</p>
+    <p class="PL- test">Lorem, ipsum dolor.</p>
+    <p class="Pl- test">Lorem, ipsum dolor.</p>
+</body>
+</html>
